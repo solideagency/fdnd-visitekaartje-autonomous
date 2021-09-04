@@ -259,6 +259,10 @@ iframe {
   padding-left: 10%;
 }
 
+.work ul li {
+  margin-bottom: 5px;
+}
+
 /* nerdy images */
 section.nerdy-images {
   grid-column: 3;
