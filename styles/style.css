@@ -107,17 +107,27 @@ body > section {
   margin-left: 10vw;
   background-color: #333;
   width: 80vw;
-  height: 65vh;
+  height: min-content;
   clear: both;
   border-radius: 1em;
 }
 
 body > section > section {
-  display: grid;
-  width: inherit;
-  height: inherit;
-  grid-template-columns: 25% 50% 25%;
-  grid-template-rows: 3rem auto auto;
+  height: 100%;
+}
+
+@media only screen and (min-width: 60em){
+  body > section {
+    height: 65vh;
+  }
+
+  body > section > section {
+    display: grid;
+    width: inherit;
+    height: inherit;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 3rem auto auto;
+  }
 }
 
 /* mac bar */
@@ -130,6 +140,12 @@ body > section > section {
   border-bottom: 2px solid black;
   border-top-left-radius: 1em;
   border-top-right-radius: 1em;
+}
+
+@media only screen and (max-width: 80em){
+  .mac-bar h1 {
+    font-size: 16px;
+  }
 }
 
 .mac-bar > div {
@@ -151,6 +167,7 @@ body > section > section {
 .mac-bar img {
   width: 1.5rem;
   height: 1.5rem;
+  margin-right: 5px;
 }
 
 .mac-bar h1, .mac-bar p, .mac-bar a {
@@ -158,37 +175,45 @@ body > section > section {
 }
 
 /* music embed */
-section.music h3 {
+section.music {
+  grid-row: 3;
   padding: 5%;
 }
 
 iframe {
+  margin-top: 10px;
   height: 100px;
 }
 
 /* work explanation */
 .work {
   padding: 0.5em;
+  width: 60%;
+  height: 80%;
+  margin-top: 10%;
+  margin-left: 20%;
   grid-column: 2;
   grid-row: 2;
-  background-color: #bbb;
+  transform:rotate(4deg);
+  position:relative;
+  top:5px;
+  background:#ccf;
 }
 
 .work h1 {
-  color: white;
-  font-family: arial;
+  color: black;
+  font-family: 'Reenie Beanie';
   font-weight: 100;
   text-align: center;
-  font-size: 28px;
+  font-size: 2.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
-.work h1 > span {
-  display: block;
-  font-style: italic;
-  font-size: 18px;
-  width: 60%;
-  margin-top: 1em;
+.work ul {
+  font-size: 1rem;
+  padding-left: 10%;
 }
