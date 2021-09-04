@@ -1,6 +1,6 @@
 //switch
 var switchButton = document.querySelector('.switch input');
-var bodyBackground = document.querySelector('section');
+var bodyBackground = document.querySelector('body');
 switchButton.addEventListener('change', function(e){
   if(switchButton.checked === true){
     bodyBackground.classList.add("barcelona");

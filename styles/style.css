@@ -1,3 +1,13 @@
+/* reset */
+html {
+  box-sizing: border-box;
+}
+
+html, body, * {
+  margin: 0;
+  padding: 0;
+}
+
 /* backgroundcolor */
 .amsterdam {
   background-color: #004f44;
@@ -7,22 +17,24 @@
   background-color: #e67650;
 }
 
-/* section */
-section {
-  height: 50vh;
-  width: 30vw;
+body {
   background-color: #004f44;
-  padding: 1em;
 }
 
-
 /* switch */
+header {
+  margin-top: 50px;
+  float: right;
+  margin-right: 50px;
+  margin-bottom: 50px;
+  clear: left;
+}
 
 .switch {
   position: relative;
-  display: inline-block;
   width: 50px;
   height: 26px;
+  display: inline-block;
 }
 
 input {
@@ -65,3 +77,20 @@ input:checked + .slider::before {
   transition: .4s;
 }
   
+/* laptop */
+body > section {
+  margin-left: 10vw;
+  background-color: #333;
+  width: 80vw;
+  height: 65vh;
+  clear: right;
+  border-radius: 1em;
+}
+
+section > section {
+  display: grid;
+  width: inherit;
+  height: inherit;
+  /* background-color: red; */
+  opacity: 0.5;
+}
