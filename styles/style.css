@@ -13,14 +13,14 @@ h1 {
   color: white;
   font-family: arial;
   font-weight: 100;
-  font-size: 28px;
+  font-size: 24px;
 }
 
 h2 {
   color: white;
   font-family: arial;
   font-weight: 100;
-  font-size: 24px;
+  font-size: 22px;
 }
 
 h3 {
@@ -110,6 +110,7 @@ body > section {
   height: min-content;
   clear: both;
   border-radius: 1em;
+  margin-bottom: 100px;
 }
 
 body > section > section {
@@ -117,9 +118,9 @@ body > section > section {
 }
 
 @media only screen and (min-width: 60em){
-  body > section {
+  /* body > section {
     height: 65vh;
-  }
+  } */
 
   body > section > section {
     display: grid;
