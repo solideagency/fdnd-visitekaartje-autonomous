@@ -39,6 +39,10 @@ h3 {
   background-color: #e67650;
 }
 
+.barcelona .mac-bar {
+  background-color: #ebebea;
+}
+
 body {
   background-color: #004f44;
 }
@@ -48,7 +52,6 @@ header {
   margin-left: 10vw;
   margin-right: 10vw;
   margin-bottom: 100px;
-  padding-top: 50px;
 }
 
 h1 {
@@ -104,6 +107,8 @@ input:checked + .slider::before {
   
 /* laptop */
 body > section {
+  position: relative;
+  top: -26px;
   margin-left: 10vw;
   background-color: #333;
   width: 80vw;
@@ -113,15 +118,19 @@ body > section {
   margin-bottom: 100px;
 }
 
+@media only screen and (min-width: 60em){
+  body > section {
+    width: 50vw;
+    min-height: 250px;
+    margin-left: 10vw;
+  }
+}
+
 body > section > section {
   height: 100%;
 }
 
 @media only screen and (min-width: 60em){
-  /* body > section {
-    height: 65vh;
-  } */
-
   body > section > section {
     display: grid;
     width: inherit;
@@ -143,12 +152,6 @@ body > section > section {
   border-top-right-radius: 1em;
 }
 
-@media only screen and (max-width: 80em){
-  .mac-bar h1 {
-    font-size: 16px;
-  }
-}
-
 .mac-bar > div {
   display: flex;
   align-items: center;
@@ -165,112 +168,48 @@ body > section > section {
   margin-right: 5px;
 }
 
-.mac-bar img {
-  width: 1.5rem;
-  height: 1.5rem;
-  margin-right: 5px;
-}
-
-.mac-bar h1, .mac-bar p, .mac-bar a {
-  color: white;
-}
-
-/* images */
-section.images {
-  grid-row: 2/3;
-  padding: 5%;
-}
-
-.img-tape {
-  position: relative;
-  text-align: center;
-  display: inline-block;
-  margin: 20px auto 10px;
-}
-
-.img-tape::before {
-  background: rgba(255,255,235,.6);
-  box-shadow: 0 1px 3px rgba(0,0,0,.4);
-  content: "";
-  display: block;
-  height: 30px;
-  position: absolute;
-  margin: auto;
-  width: 100px;
-  z-index: 2;  
-  transform:rotate(-4deg);
-  margin-left: 30%;
-  margin-top: -10px;
-}
-
-.img-tape img {
-  width: 80%;
-  margin-left: 5%;
-  height: auto;
-  transform:rotate(-2deg);
-}
-
-section.images img:before {
-  left: 50%;
-  margin-left: -50px;
-  top: -10px;
-}
-
-/* music embed */
-section.music {
-  grid-row: 3;
-  padding: 5%;
-}
-
-iframe {
-  margin-top: 10px;
-  height: 100px;
-}
-
-/* work explanation */
-.work {
-  padding: 0.5em;
-  width: 60%;
-  height: 80%;
-  margin-top: 10%;
-  margin-left: 20%;
-  grid-column: 2;
-  grid-row: 2;
-  transform:rotate(4deg);
-  position:relative;
-  top:5px;
-  background:#ccf;
-}
-
-.work h1 {
-  color: black;
-  font-family: 'Reenie Beanie';
-  font-weight: 100;
-  text-align: center;
-  font-size: 2rem;
+figure {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 10px;
-  margin-bottom: 20px;
+  padding-bottom: 4em;
 }
 
-.work ul {
-  font-size: 1rem;
-  padding-left: 10%;
+figure:hover {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
-.work ul li {
-  margin-bottom: 5px;
+figure:hover figcaption {
+  background-color: blue;
+  color: white;
 }
 
-/* nerdy images */
-section.nerdy-images {
-  grid-column: 3;
-  grid-row: 3;
+figcaption {
+  font-size: .75em;
+  color: grey;
+  margin-top: .5em;
 }
 
-section.nerdy-images img {
-  width: 80%;
+.folder {
+  width: 50px;
   height: auto;
+}
+
+.picture {
+  width: 100px;
+  height: auto;
+}
+
+figure:nth-of-type(1) {
+  padding-left: -20px;
+  padding-top: 40px;
+}
+
+figure:nth-of-type(2) {
+  padding-top: 20px;
+}
+
+figure:nth-of-type(4) {
+  padding-left: 20px;
 }
