@@ -11,15 +11,15 @@ html, body, * {
 
 /* backgroundcolor */
 body {
-  background-color: #004f44;
+  background-color: rgb(163, 221, 157);
 }
 
 .amsterdam {
-  background-color: #004f44;
+  background-color: rgb(163, 221, 157);
 }
 
 .barcelona {
-  background-color: #e67650;
+  background-color: rgb(202, 186, 238);
 }
 
 .barcelona .mac-bar {
@@ -50,7 +50,7 @@ input:checked + .slider:before {
   }
 
 input:checked + .slider::before {
-  background-color: #004f44;
+  background-color: rgb(163, 221, 157);
 }
   
 .slider {
@@ -72,7 +72,7 @@ input:checked + .slider::before {
   left: 3px;
   bottom: 3px;
   border-radius: 50%;
-  background-color: #e67650;
+  background-color: rgb(202, 186, 238);
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -85,7 +85,18 @@ body > section {
   margin-top: calc(10vh - 50px - 26px);
   margin-left: 10vw;
   background-color: #333;
+  background-image: url("../assets/1665999896342.jpeg");
+  background-size: cover;
+  background-position: 50% 10%;
   border-radius: 1em;
+}
+
+body > section > div {
+    background: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(8px); 
+    height: 100%;
+    width: 100%;
+    border-radius: 1em;
 }
 
 @media only screen and (min-width: 60em){
@@ -127,7 +138,7 @@ figure:hover figcaption {
 
 figcaption {
   font-size: .75em;
-  color: grey;
+  color: black;
   margin-top: .5em;
 }
 
@@ -161,7 +172,7 @@ figure:nth-of-type(4) {
   display: flex;
   justify-content: space-between;
   background-color: rgba(0, 0, 0, 0.5);
-  border-bottom: 2px solid black;
+  /* border-bottom: 2px solid black; */
   border-top-left-radius: 1em;
   border-top-right-radius: 1em;
 }
@@ -180,4 +191,25 @@ figure:nth-of-type(4) {
   border-radius: 50%;
   display: inline-block;
   margin-right: 5px;
+}
+
+/* footer */
+footer {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  display: flex;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+}
+
+footer ul li {
+  margin: 0 5px;
+}
+
+footer a {
+  color: black;
 }
